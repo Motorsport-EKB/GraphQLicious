@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import GraphQLicious
+
 class MutationTests: XCTestCase {
   override func setUp() {
     super.setUp()

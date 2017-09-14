@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import GraphQLicious
+@testable import GraphQLicious
 
 class FragmentTests: XCTestCase {
   
