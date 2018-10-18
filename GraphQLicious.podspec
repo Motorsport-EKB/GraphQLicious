@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "GraphQLicious"
-  s.version = "1.1.0"
+  s.version = "1.1.1"
   s.summary = "A swift component with a DSL to declare GraphQL queries and to get string representations out of them"
   s.description = <<-DESC
   GraphQLicious is a leightweight framework for conveniently creating queries that can be read and interpreted by GraphQL.
