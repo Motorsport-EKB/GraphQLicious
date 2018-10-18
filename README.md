@@ -5,14 +5,14 @@ GraphQLicious is a swift component that provides an intuitive and convenient way
 [![Platform](https://img.shields.io/cocoapods/p/GraphQLicious.svg?style=flat)](https://github.com/WeltN24/GraphQLicious)
 [![carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![cocoapods](https://img.shields.io/cocoapods/v/GraphQLicious.svg)](http://cocoapods.org/pods/GraphQLicious)
-[![Swift](https://img.shields.io/badge/Swift-3.2-orange.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org)
 [![license](https://img.shields.io/cocoapods/l/GraphQLicious.svg)](http://cocoapods.org/pods/GraphQLicious)
 [![travis](http://img.shields.io/travis/WeltN24/GraphQLicious.svg)](https://travis-ci.org/WeltN24/GraphQLicious)
 [![codebeat](https://codebeat.co/badges/44501d73-aea0-42ad-8206-0466c4bb26b3)](https://codebeat.co/projects/github-com-weltn24-graphqlicious)
 [![codecov](https://codecov.io/gh/WeltN24/GraphQLicious/branch/master/graph/badge.svg)](https://codecov.io/gh/WeltN24/GraphQLicious)
 
-
 # Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Authors](#authors)
@@ -20,17 +20,18 @@ GraphQLicious is a swift component that provides an intuitive and convenient way
 
 ## Installation
 
-
 ### CocoaPods
+
 `GraphQLicious` is available through CocoaPods. To install it, simply add the following line to your Podfile
 
-```
+```bash
 pod "GraphQLicious" :git => "https://github.com/omaralbeik/GraphQLicious.git"
 ```
 
 ## Usage
 
 ### Query
+
 Let's assume, we have the id of an article and we want to have the `headline`, `body` text and `opener image` of that article.
 
 Our graphQL query for that will look like this:
@@ -105,10 +106,10 @@ let imageContentRequest = Request(
 		imageContent
 	]
 )
-```  
+```
 
-So now we have a Request with an embedded Fragment. Let's go one step further.  
-If we want to, we can imbed that Request into another Fragment. (We can also embed Fragments into Fragments)  
+So now we have a Request with an embedded Fragment. Let's go one step further.
+If we want to, we can imbed that Request into another Fragment. (We can also embed Fragments into Fragments)
 Additionally to the opener image with its id and url we also want the `headline` and `body` text of the article.
 
 ```swift
@@ -137,14 +138,16 @@ let query = Query(request: Request(
 	]),
 	fragments: [articleContent, imageContent]
 )
-```  
+```
 
 All we have to do now is to call `create()` on our Query and we're good to go.
 
-```
+```swift
 print(query.create())
 ```
+
 ### Mutation
+
 Let's assume, we want to change our username and our age in our backend and we want to have the new name and age back to make sure everything went right.
 
 Let's assume further, our server provides a mutating method `editMe` for exactly that purpose.
@@ -197,8 +200,9 @@ print(mutation.create())
 ```
 
 ## Authors
+
 `GraphQLicious` was made in-house by WeltN24 and Updated Swift 3.2 by omaralbeik
 
-
 ## License
+
 `GraphQLicious` is available under the MIT license. See the LICENSE files for more info.
